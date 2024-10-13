@@ -54,3 +54,12 @@ Gebruikers (De mensen die willen/gaan adopteren):
 - Als gebruiker wil ik kunnen zoeken naar dieren en filteren op diersoort, zodat ik snel kan vinden wat ik zoek.
 
 - Als ingelogde gebruiker wil ik dieren kunnen toevoegen, bewerken en verwijderen, zodat ik kan helpen bij het aanbod van adoptiedieren.
+
+
+**ERD**
+
+- users tabel
+- animals tabel
+- adoption requests tabel voor wanneer users op adoptie drukken bij een dier
+
+![screenshot erd](images/laravel_erd.png)
