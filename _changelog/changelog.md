@@ -23,3 +23,34 @@ Ik heb vandaag **12/10/2024**:
 - ProductController.php (Resource) bestand gemaakt.
 - index.blade.php en show.blade.php bestand gemaakt
 - Route met parameter toegevoegd voor products url in web.php
+
+Ik heb vandaag **13/10/2024**:
+
+- Een idee voor mijn applicatie gekregen
+- Een beschrijving geschreven voor mijn applicatie
+- User Stories gemaakt
+
+Mijn idee voor mijn applicatie:
+
+**Een dieren adoptatie applicatie.**
+
+De applicatie is een plek voor het adopteren van dieren waar **normale gebruikers/bezoekers** dieren kunnen bekijken en misschien een knop kunnen drukken om te "adopteren". 
+
+**Ingelogde gebruikers** kunnen dieren toevoegen, bewerken en verwijderen. 
+
+**De admin** krijgt een dashboard te zien met..
+
+De applicatie laat een detailpagina voor elk dier zien met informatie zoals tekst en afbeelding en een zoek- en filterfunctie, dit kan dus bijvoorbeeld zijn: Honden, Katten, Knaagdieren, Vogels etc.
+
+
+**User Stories**
+Gebruikers (De mensen die willen/gaan adopteren):
+- Als gebruiker wil ik me kunnen registreren en inloggen, zodat ik toegang heb tot functies die alleen voor ingelogde gebruikers zijn.
+
+- Als gebruiker wil ik een lijst kunnen zien van beschikbare dieren, zodat ik kan kijken welke dieren er voor adoptie zijn.
+
+- Als gebruiker wil ik meer informatie over een dier kunnen bekijken, zodat ik een goed beeld krijg van het dier dat ik overweeg te adopteren.
+
+- Als gebruiker wil ik kunnen zoeken naar dieren en filteren op diersoort, zodat ik snel kan vinden wat ik zoek.
+
+- Als ingelogde gebruiker wil ik dieren kunnen toevoegen, bewerken en verwijderen, zodat ik kan helpen bij het aanbod van adoptiedieren.
