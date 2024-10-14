@@ -63,3 +63,11 @@ Gebruikers (De mensen die willen/gaan adopteren):
 - adoption requests tabel voor wanneer users op adoptie drukken bij een dier
 
 ![screenshot erd](images/laravel_erd.png)
+
+
+Ik heb vandaag **14/10/2024**:
+
+- De route voor home veranderd
+- Layouts gebruikt
+- About pagina met tekst aangemaakt met ChatGPT, zie foto
+- Naam bedacht voor website, Pawfect Match

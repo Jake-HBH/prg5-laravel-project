@@ -5,9 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -23,9 +21,13 @@ require __DIR__.'/auth.php';
 
 
 
-//route voor home
-Route::get('/home', [HomeController::class, 'index']);
-//Route::get('/home', [HomeController::class, 'index']);
+Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
 
 //route/pagina om *alleen* de naam te zien(?)
 Route::get('/home/{name}', function (string $name) {
@@ -39,4 +41,6 @@ Route::get('home/{name}/address/{address}', function (string $name, string $addr
 
 
 Route::get('products/{name}', [ProductController::class, 'show']);
+
+
 
