@@ -1,10 +1,10 @@
 <x-layout>
     <h1>About</h1>
-    <p>Welkom bij Pawfect Match, het platform dat dieren helpt hun nieuwe thuis te vinden. Wij geloven dat elk dier een warme, liefdevolle plek verdient en verbinden opvangdieren met mensen die op zoek zijn naar een trouwe vriend.</p>
+    <p>Welcome to Pawfect Match, the platform dedicated to helping animals in need find their forever homes. We believe that every pet deserves a loving family, and our mission is to connect shelter animals with compassionate adopters like you.</p>
 
-        <p>Op onze website kun je door een breed aanbod van huisdieren bladeren, waaronder honden, katten, knaagdieren en andere dieren. Zoek je een speelse pup of een rustige metgezel? Bij ons vind je het juiste dier.</p>
+        <p>At Pawfect Match, you can explore a wide range of animals, including dogs, cats, small pets, birds, and many other types of animals, all waiting to meet their new families. Whether you’re searching for an energetic puppy or a gentle companion, we have the perfect pet for you.</p>
 
-        <p>Geregistreerde gebruikers kunnen dieren toevoegen en beheren, waardoor alle informatie actueel blijft. Klaar om een dier te adopteren? Gebruik onze handige zoek- en filterfuncties om jouw ideale huisdier te vinden.</p>
+        <p>Our community of registered users helps maintain up-to-date and accurate information about each animal, ensuring a reliable experience for all. We encourage you to sign up and become part of our community of animal lovers.</p>
 
-        <p>Pawfect Match helpt dieren en baasjes elkaar te vinden voor een gelukkig nieuw begin. Start vandaag nog jouw zoektocht!</p>
+        <p>Together, we can give these animals the second chance they deserve. Pawfect Match is not just a platform; it's a bridge to a brighter future for pets in need. Start your journey with us today!</p>
 </x-layout>

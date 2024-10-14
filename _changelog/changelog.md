@@ -71,3 +71,8 @@ Ik heb vandaag **14/10/2024**:
 - Layouts gebruikt
 - About pagina met tekst aangemaakt met ChatGPT, zie foto
 - Naam bedacht voor website, Pawfect Match
+
+Ik heb vandaag **15/10/2024**:
+
+- De tekst op de home en about pagina naar het Engels vertaald, vanaf nu word de taal naar het Engels gezet
+- Tekst van home en about licht aangepast
