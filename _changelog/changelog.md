@@ -83,3 +83,10 @@ Update **16102024.1**:
 - create pagina aangemaakt en werkend gekregen
 - je kan nu foto's toevoegen van je huisdier, d.m.v image address toe te voegen aan het "Image URL" veld
 - meerdere bestanden aangemaakt voor de animal index view pagina en backend
+
+Update **16102024.2**:
+
+- Homecontroller.php verwijderd
+- ProductController.php verwijderd
+- Tailwind css toegevoegd aan alle pagina's
+- Knop toegevoegd aan home page om naar de huisdieren voor adoptie pagina te gaan

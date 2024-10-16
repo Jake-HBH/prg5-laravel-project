@@ -31,21 +31,9 @@ Route::get('/about', function () {
 });
 
 
-
-//route/pagina om *alleen* de naam te zien(?)
-Route::get('/home/{name}', function (string $name) {
-    return "This person's name is: ".$name;
-});
-
-//route/pagina om naam *en* adres te laten zien(?)
-Route::get('home/{name}/address/{address}', function (string $name, string $address) {
-    return "This person's name is: ".$name. " and their address is: ".$address;
-});
-
-
-Route::get('products/{name}', [ProductController::class, 'show']);
-
 Route::resource('animals', AnimalController::class);
+
+Route::delete('/animals/{animal}', [AnimalController::class]);
 
 //index = /animals (GET)
 //create = /animals/create

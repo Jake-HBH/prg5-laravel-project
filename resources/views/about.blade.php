@@ -1,4 +1,7 @@
 <x-layout>
+    <x-slot:heading>
+        About Page
+    </x-slot:heading>
     <h1>About</h1>
     <p>Welcome to Pawfect Match, the platform dedicated to helping animals in need find their forever homes. We believe that every pet deserves a loving family, and our mission is to connect shelter animals with compassionate adopters like you.</p>
 

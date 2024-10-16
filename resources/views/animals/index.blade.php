@@ -1,3 +1,5 @@
+{{--//de pagina van de aangemaakte dieren--}}
+
 <x-layout>
     <h2>Overview of all animals</h2>
     {{--    <p>{{$animal->name}}</p>--}}
