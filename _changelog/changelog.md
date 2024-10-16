@@ -32,9 +32,9 @@ Ik heb vandaag **13/10/2024**:
 
 Mijn idee voor mijn applicatie:
 
-**Een dieren adoptatie applicatie.**
+**Een huisdieren adoptatie applicatie.**
 
-De applicatie is een plek voor het adopteren van dieren waar **normale gebruikers/bezoekers** dieren kunnen bekijken en misschien een knop kunnen drukken om te "adopteren". 
+De applicatie is een plek voor het adopteren van huisdieren waar **normale gebruikers/bezoekers** huisdieren kunnen bekijken en misschien een knop kunnen drukken om te "adopteren". 
 
 **Ingelogde gebruikers** kunnen dieren toevoegen, bewerken en verwijderen. 
 
@@ -60,7 +60,7 @@ Gebruikers (De mensen die willen/gaan adopteren):
 
 - users tabel
 - animals tabel
-- adoption requests tabel voor wanneer users op adoptie drukken bij een dier
+- adoption requests tabel voor wanneer users op adoptie drukken bij een huisdier
 
 ![screenshot erd](images/laravel_erd.png)
 
@@ -76,3 +76,10 @@ Ik heb vandaag **15/10/2024**:
 
 - De tekst op de home en about pagina naar het Engels vertaald, vanaf nu word de taal naar het Engels gezet
 - Tekst van home en about licht aangepast
+
+Update **16102024.1**:
+
+- index aangemaakt waar je alle huisdieren kan bekijken in een list
+- create pagina aangemaakt en werkend gekregen
+- je kan nu foto's toevoegen van je huisdier, d.m.v image address toe te voegen aan het "Image URL" veld
+- meerdere bestanden aangemaakt voor de animal index view pagina en backend

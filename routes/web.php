@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -29,6 +30,8 @@ Route::get('/about', function () {
     return view('about');
 });
 
+
+
 //route/pagina om *alleen* de naam te zien(?)
 Route::get('/home/{name}', function (string $name) {
     return "This person's name is: ".$name;
@@ -42,5 +45,13 @@ Route::get('home/{name}/address/{address}', function (string $name, string $addr
 
 Route::get('products/{name}', [ProductController::class, 'show']);
 
+Route::resource('animals', AnimalController::class);
 
+//index = /animals (GET)
+//create = /animals/create
+//store = /animals (POST)
+//update = /animals (PUT)
+//show = /animals/{product}
+//delete = /animals/{product}
 
+//php artisan
