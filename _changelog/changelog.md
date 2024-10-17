@@ -90,3 +90,8 @@ Update **16102024.2**:
 - ProductController.php verwijderd
 - Tailwind css toegevoegd aan alle pagina's
 - Knop toegevoegd aan home page om naar de huisdieren voor adoptie pagina te gaan
+
+Update **17102024.1**:
+
+- nav layout meer dynamisch gemaakt
+- tailwind css aangepast voor de nav
