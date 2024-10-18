@@ -129,3 +129,8 @@ Update **18102024.1**:
 - details pagina werkend gemaakt
 - adoptie pagina/animals pagina overview verbeterd
 - datum word nu toegevoegd wanneer je je huisdier voor adoptie zet
+
+Update **18102024.1**:
+
+- kleine css veranderingen voor de links
+- "find pet" nu in de navigatie om bij de animals page te komen

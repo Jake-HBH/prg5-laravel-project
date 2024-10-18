@@ -15,8 +15,8 @@
     <p>Description: {{ $animal->description }}</p>
 
 
-    <a href="{{ route('animals.index') }}">
-        Ga terug naar dieren adoptie overzicht
+    <a href="{{ route('animals.index') }}" class="font-bold text-blue-900  hover:underline">
+        Back to pet overview
     </a>
 
 {{--    <form action="{{ route('animals.destroy', $animal) }}" method="post">--}}
