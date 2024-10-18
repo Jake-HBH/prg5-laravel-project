@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\AnimalController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +21,10 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('home',
+        ['greeting' => 'Hello',
+            'name' => 'Jake'
+        ]);
 });
 
 Route::get('/about', function () {

@@ -1,19 +1,29 @@
 <x-layout>
     <x-slot:heading>
-        Animal Page
+        {{ $animal->name }}
     </x-slot:heading>
-    <h2>{{ $animal->name }}</h2>
-    <h2>{{ $animal->description }}</h2>
+
+    @if($animal->image_url)
+        <img src="{{ $animal->image_url }}" alt="{{ $animal->name }}" width="700">
+    @else
+        <p>No image available</p>
+    @endif
+
+    <h3>Species: {{ $animal->species }}</h3>
+    <h3>Age: {{ $animal->age }}</h3>
+    <h3>Gender: {{ $animal->gender }}</h3>
+    <p>Description: {{ $animal->description }}</p>
+
 
     <a href="{{ route('animals.index') }}">
         Ga terug naar dieren adoptie overzicht
     </a>
 
-    <form action="{{ route('animals.destroy', $animal) }}" method="post">
-        @csrf
-        @method('DELETE')
-        <input type="submit" value="Delete">
-    </form>
+{{--    <form action="{{ route('animals.destroy', $animal) }}" method="post">--}}
+{{--        @csrf--}}
+{{--        @method('DELETE')--}}
+{{--        <input type="submit" value="Delete">--}}
+{{--    </form>--}}
 
 {{--    <form action="" method="post">--}}
 {{--        @method('PATCH') //edit methode--}}

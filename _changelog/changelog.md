@@ -47,14 +47,18 @@ De applicatie laat een detailpagina voor elk dier zien met informatie zoals teks
 Gebruikers (De mensen die willen/gaan adopteren):
 - Als gebruiker wil ik me kunnen registreren en inloggen, zodat ik toegang heb tot functies die alleen voor ingelogde gebruikers zijn.
 
-- Als gebruiker wil ik een lijst kunnen zien van beschikbare dieren, zodat ik kan kijken welke dieren er voor adoptie zijn.
+- Als gebruiker wil ik een lijst kunnen zien van beschikbare huisdieren, zodat ik kan kijken welke dieren er voor adoptie zijn.
 
-- Als gebruiker wil ik meer informatie over een dier kunnen bekijken, zodat ik een goed beeld krijg van het dier dat ik overweeg te adopteren.
+- Als gebruiker wil ik meer informatie over een huisdier kunnen bekijken, zodat ik een goed beeld krijg van het huisdier dat ik overweeg te adopteren.
 
 - Als gebruiker wil ik kunnen zoeken naar dieren en filteren op diersoort, zodat ik snel kan vinden wat ik zoek.
 
-- Als ingelogde gebruiker wil ik dieren kunnen toevoegen, bewerken en verwijderen, zodat ik kan helpen bij het aanbod van adoptiedieren.
+- Als ingelogde gebruiker wil ik huisdieren kunnen toevoegen, bewerken en verwijderen, zodat ik kan helpen bij het aanbod van adoptiedieren.
 
+
+Admins:
+- Als admin wil ik toegang hebben tot een dashboard alleen voor admins, zodat ik dierenprofielen kan beheren.
+- Als admin wil ik ervoor zorgen dat alleen ingelogde gebruikers bepaalde acties kunnen uitvoeren, zodat de beveiliging beter zal zijn.
 
 **ERD**
 
@@ -63,6 +67,30 @@ Gebruikers (De mensen die willen/gaan adopteren):
 - adoption requests tabel voor wanneer users op adoptie drukken bij een huisdier
 
 ![screenshot erd](images/laravel_erd.png)
+
+
+**MoSCoW Methode**
+
+Must Have
+
+- Gebruikers moeten kunnen inloggen en registreren om toegang te krijgen tot bepaalde functionaliteiten.
+- Alleen ingelogde gebruikers kunnen hun huisdieren toevoegen aan de database.
+- Admin gebruikers moeten toegang hebben tot een dashboard dat alleen voor hen zichtbaar is.
+- Alleen geautoriseerde gebruikers mogen bepaalde acties kunnen uitvoeren, zoals huisdieren toevoegen.
+- Pagina met overzicht van alle huisdieren voor adoptie
+- Ingelogde gebruikers moeten hun gegevens kunnen aanpassen op een andere pagina
+- CRUD functionaliteit
+- Zoek en filter functionaliteit voor op de huisdieren pagina
+- Verschillende rollen (admin, gebruiker)
+- Alleen de uploader van het huisdier voor adoptie mag het item wijzigen.
+- Beveiliging (OWASP top 10)
+- Schakelen van status met button/dropdown in lijst (bijv. geadopteerd/voor adoptie/gereserveerd)
+- Diepere validatie 
+
+Should Have
+
+- Afbeeldingen kunnen zetten bij het toevoegen van een huisdier
+
 
 
 Ik heb vandaag **14/10/2024**:
@@ -95,3 +123,9 @@ Update **17102024.1**:
 
 - nav layout meer dynamisch gemaakt
 - tailwind css aangepast voor de nav
+
+Update **18102024.1**:
+
+- details pagina werkend gemaakt
+- adoptie pagina/animals pagina overview verbeterd
+- datum word nu toegevoegd wanneer je je huisdier voor adoptie zet
