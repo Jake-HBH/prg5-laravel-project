@@ -134,3 +134,9 @@ Update **18102024.1**:
 
 - kleine css veranderingen voor de links
 - "find pet" nu in de navigatie om bij de animals page te komen
+
+Update **19102024.1**:
+
+- UserFactory variables gewijzigd/toegevoegd (first_name en last_name in plaats van alleen name)
+- nieuwe migrations (van UserFactory ^)
+- geleerd over factories, tinker en factory functions

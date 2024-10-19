@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Animal;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,18 +22,21 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/', function () {
-    return view('home',
-        ['greeting' => 'Hello',
-            'name' => 'Jake'
-        ]);
+//    $animals = Animal::all();
+    return view('home');
 });
 
 Route::get('/about', function () {
     return view('about');
 });
 
+//Route::get('/animals', function () {
+//    return view('animals.index');
+//});
+
 
 Route::resource('animals', AnimalController::class);
+
 
 Route::delete('/animals/{animal}', [AnimalController::class]);
 
