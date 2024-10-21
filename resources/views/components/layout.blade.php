@@ -26,6 +26,8 @@
                             <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
                             <x-nav-link href="/animals" :active="request()->is('animals')">Find pet</x-nav-link>
                             <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
+                            @include('layouts.navigation')
+
 
                         </div>
                     </div>
@@ -120,7 +122,7 @@
 
     <header class="bg-white shadow">
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $heading }}</h1>
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900"></h1>
         </div>
     </header>
 

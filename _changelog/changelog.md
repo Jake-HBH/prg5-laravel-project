@@ -140,3 +140,9 @@ Update **19102024.1**:
 - UserFactory variables gewijzigd/toegevoegd (first_name en last_name in plaats van alleen name)
 - nieuwe migrations (van UserFactory ^)
 - geleerd over factories, tinker en factory functions
+
+Update **21102024.1**:
+
+- user dashboard toegevoegd
+- login/registratie werkend gemaakt
+- authenticatie voor create pagina

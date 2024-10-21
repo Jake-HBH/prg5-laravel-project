@@ -7,12 +7,29 @@
         @csrf
         <div>
             <x-input-label name="name">Name</x-input-label>
-            <x-text-input name="name" id="name" placeholder="Enter your pet's name"></x-text-input>
+            <x-text-input
+                name="name"
+                id="name"
+                placeholder="Enter your pet's name"
+                value="{{ old('name') }}"
+            ></x-text-input>
+            @error('name')
+            <span>
+                {{ $message }}
+            </span>
+            @enderror
         </div>
 
         <div>
             <label for="description">Description</label>
-            <textarea name="description" id="description" placeholder="Enter your pet's description"></textarea>
+            <textarea name="description" id="description" placeholder="Enter your pet's description">
+                {{old('description')}}
+            </textarea>
+            @error('description')
+            <span>
+                {{ $message }}
+            </span>
+            @enderror
         </div>
 
         <div>
