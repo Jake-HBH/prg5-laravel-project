@@ -152,4 +152,8 @@ Update **22102024.1**:
 - je krijgt nu error messages wanneer de (create) fields leeg zijn
 - je oude ingevulde data word teruggezet in de (create) fields na een foute submit
 - (tijdelijke) flex op create pagina gezet voor betere overzichtelijkheid
-- 
+
+Update **23102024.1**:
+
+- adoption status toegevoegd aan animal page
+- old age input field gefixt

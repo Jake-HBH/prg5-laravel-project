@@ -9,16 +9,17 @@
 <div class="animal-card">
     <h3><strong>{{ $animal->name }}</strong></h3>
 
-    @if($animal->image_url)
+    <h3>{{ $animal->adoption_status }}</h3>
+
+
+@if($animal->image_url)
         <img src="{{ $animal->image_url }}" alt="{{ $animal->name }}" width="200">
     @else
         <p>No image available</p>
     @endif
 
+
     <h3><strong>{{ $animal->address }}</strong> {{ $animal->created_at->format('d-m-Y') }}</h3>
-
-
-
 
 
     <!-- Link to details page using Laravel routing -->

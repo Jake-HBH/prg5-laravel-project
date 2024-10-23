@@ -36,33 +36,47 @@
             <x-input-label for="species">Species</x-input-label>
             <br>
             <div class="flex flex-row gap-4">
-                <x-text-input type="radio" name="species" id="dog" value="Dog" :checked="old('species') === 'Dog'"></x-text-input>
-{{--                :checked="old('species') === 'Dog'" is een boolean en wordt gechecked of het gecheckt is, als het waar is word de checkbox op true gezet en dus gecheckt--}}
+                <x-text-input type="radio" name="species" id="dog" value="Dog"
+                              :checked="old('species') === 'Dog'" />
+                {{--                :checked="old('species') === 'Dog'" is een boolean en wordt gechecked of het gecheckt is, als het waar is word de checkbox op true gezet en dus gecheckt--}}
                 <x-input-label for="Dog">Dog</x-input-label>
 
-                <x-text-input type="radio" name="species" id="cat" value="Cat" :checked="old('species') === 'Cat'">Cat</x-text-input>
+                <x-text-input type="radio" name="species" id="cat" value="Cat" :checked="old('species') === 'Cat'">Cat
+                </x-text-input>
                 <x-input-label for="Cat">Cat</x-input-label>
 
-                <x-text-input type="radio" name="species" id="rodent" value="Rodent" :checked="old('species') === 'Rodent'">Rodent</x-text-input>
+                <x-text-input type="radio" name="species" id="rodent" value="Rodent"
+                              :checked="old('species') === 'Rodent'">Rodent
+                </x-text-input>
                 <x-input-label for="Rodent">Rodent</x-input-label>
 
-                <x-text-input type="radio" name="species" id="bird" value="Bird" :checked="old('species') === 'Bird'">Bird</x-text-input>
+                <x-text-input type="radio" name="species" id="bird" value="Bird" :checked="old('species') === 'Bird'">
+                    Bird
+                </x-text-input>
                 <x-input-label for="Bird">Bird</x-input-label>
 
-                <x-text-input type="radio" name="species" id="fish" value="Fish" :checked="old('species') === 'Fish'">Fish</x-text-input>
+                <x-text-input type="radio" name="species" id="fish" value="Fish" :checked="old('species') === 'Fish'">
+                    Fish
+                </x-text-input>
                 <x-input-label for="Fish">Fish</x-input-label>
 
-                <x-text-input type="radio" name="species" id="reptile" value="Reptile" :checked="old('species') === 'Reptile'">Reptile</x-text-input>
+                <x-text-input type="radio" name="species" id="reptile" value="Reptile"
+                              :checked="old('species') === 'Reptile'">Reptile
+                </x-text-input>
                 <x-input-label for="Reptile">Reptile</x-input-label>
 
-                <x-text-input type="radio" name="species" id="amphibian" value="Amphibian" :checked="old('species') === 'Amphibian'">Amphibian</x-text-input>
+                <x-text-input type="radio" name="species" id="amphibian" value="Amphibian"
+                              :checked="old('species') === 'Amphibian'">Amphibian
+                </x-text-input>
                 <x-input-label for="Amphibian">Amphibian</x-input-label>
 
-                <x-text-input type="radio" name="species" id="exotic" value="Exotic" :checked="old('species') === 'Exotic'">Exotic </x-text-input>
+                <x-text-input type="radio" name="species" id="exotic" value="Exotic"
+                              :checked="old('species') === 'Exotic'">Exotic
+                </x-text-input>
                 <x-input-label for="Exotic">Exotic</x-input-label>
 
                 @error('species')
-                    <span>
+                <span>
                         {{ $message }}
                     </span>
                 @enderror
@@ -95,17 +109,16 @@
                 </x-text-input>
                 <x-input-label for="Reserved">Reserved</x-input-label>
                 @error('adoption_status')
-                <span>
-                {{ $message }}
-            </span>
+                    <span>
+                        {{ $message }}
+                    </span>
                 @enderror
             </div>
         </div>
 
         <div>
             <x-input-label for="age">Age</x-input-label>
-            <x-text-input type="number" name="age" id="age">
-            </x-text-input>
+            <x-text-input type="number" name="age" id="age" value="{{old('age')}}" />
             @error('age')
             <span>
                 {{ $message }}
@@ -118,13 +131,16 @@
 
         <div class="flex flex-row gap-4">
 
-            <x-text-input type="radio" name="gender" id="male" value="Male" :checked="old('gender') === 'Male'"></x-text-input>
+            <x-text-input type="radio" name="gender" id="male" value="Male"
+                          :checked="old('gender') === 'Male'"></x-text-input>
             <x-input-label for="Male">Male</x-input-label>
 
-            <x-text-input type="radio" name="gender" id="female" value="Female" :checked="old('gender') === 'Female'"></x-text-input>
+            <x-text-input type="radio" name="gender" id="female" value="Female"
+                          :checked="old('gender') === 'Female'"></x-text-input>
             <x-input-label for="Female">Female</x-input-label>
 
-            <x-text-input type="radio" name="gender" id="unknown" value="Unknown" :checked="old('gender') === 'Unknown'"></x-text-input>
+            <x-text-input type="radio" name="gender" id="unknown" value="Unknown"
+                          :checked="old('gender') === 'Unknown'"></x-text-input>
             <x-input-label for="Unknown">Unknown</x-input-label>
             @error('gender')
             <span>
