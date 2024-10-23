@@ -157,3 +157,7 @@ Update **23102024.1**:
 
 - adoption status toegevoegd aan animal page
 - old age input field gefixt
+
+Update **24102024**:
+
+- filtersyteem voor species met tags
