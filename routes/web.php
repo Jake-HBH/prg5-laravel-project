@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Animal;
 use Illuminate\Support\Facades\Route;
 
 // dashboard voor ingelogde users/admin
@@ -41,5 +42,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/animals/{animal}', [AnimalController::class, 'destroy'])->name('animals.destroy');
 });
 
-Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');  // Public
+Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');
 Route::get('/animals/{animal}', [AnimalController::class, 'show'])->name('animals.show');  // Public

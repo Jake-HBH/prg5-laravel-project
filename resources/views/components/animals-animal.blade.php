@@ -6,13 +6,13 @@
 </x-slot:heading>
 
 
-<div class="animal-card">
+<div class="animal-card mb-5">
     <h3><strong>{{ $animal->name }}</strong></h3>
 
     <h3>{{ $animal->adoption_status }}</h3>
 
 
-@if($animal->image_url)
+    @if($animal->image_url)
         <img src="{{ $animal->image_url }}" alt="{{ $animal->name }}" width="200">
     @else
         <p>No image available</p>

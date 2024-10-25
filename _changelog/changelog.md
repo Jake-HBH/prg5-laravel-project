@@ -161,3 +161,10 @@ Update **23102024.1**:
 Update **24102024**:
 
 - filtersyteem voor species met tags
+
+
+Update **25102024**:
+
+- animals die zijn toegevoegd staan nu in een latest plek 
+- de latest added animals worden nu bovenaan laten zien
+- mooiere layout in cards
