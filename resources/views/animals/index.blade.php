@@ -2,7 +2,9 @@
 
 <x-layout>
 
-    <form action="{{ route('animals.index') }}" method="get" class="mb-4">
+    <a href="{{ route('animals.create') }}" class="font-bold text-blue-900 hover:underline">Add animal</a>
+
+    <form action="{{ route('animals.index') }}" method="get" class="mt-4">
         <label for="filter" class="sr-only">Filter</label>
         <select name="filter" id="filter" class="border border-gray-300 rounded p-2">
             <option value="">All animals</option>
@@ -13,8 +15,6 @@
         </select>
         <button type="submit" class="ml-2 bg-blue-500 text-white rounded p-2">Filter</button>
     </form>
-
-    <a href="{{ route('animals.create') }}" class="font-bold text-blue-900 hover:underline">Add animal</a>
 
     <h2 class="text-xl font-bold mt-6 mb-4">Latest Added Animals</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
@@ -28,6 +28,7 @@
                     <h5 class="font-semibold text-lg">{{ $animal->name }}</h5>
                     <p class="text-gray-500"><strong><small>{{ $animal->address }}
                         </strong>{{ $animal->created_at->format('d F Y') }}</small></p>
+                    <p class="text-gray-500"><small>Posted by: {{ $animal->user->name ?? 'Unknown' }}</small></p>
                     <a href="{{ route('animals.show', $animal) }}"
                        class="mt-2 inline-block bg-blue-500 text-white rounded p-2">View Details</a>
                 </div>
@@ -48,6 +49,7 @@
                         <h5 class="font-semibold text-lg">{{ $animal->name }}</h5>
                         <p class="text-gray-500"><strong><small>{{ $animal->address }}
                             </strong>{{ $animal->created_at->format('d F Y') }}</small></p>
+                        <p class="text-gray-500"><small>Posted by: {{ $animal->user->name ?? 'Unknown' }}</small></p>
                         <a href="{{ route('animals.show', $animal) }}"
                            class="mt-2 inline-block bg-blue-500 text-white rounded p-2">View Details</a>
                     </div>

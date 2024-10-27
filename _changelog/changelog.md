@@ -168,3 +168,8 @@ Update **25102024**:
 - animals die zijn toegevoegd staan nu in een latest plek 
 - de latest added animals worden nu bovenaan laten zien
 - mooiere layout in cards
+
+Update **27102024**:
+
+- je kunt nu zien wie de posts heeft gemaakt, gebaseerd op user name
+- hamburger menu werkt nu als je op je naam drukt (wanneer je ingelogd bent), hiermee kun je naar je profile en uitloggen

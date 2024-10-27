@@ -37,7 +37,7 @@
             <br>
             <div class="flex flex-row gap-4">
                 <x-text-input type="radio" name="species" id="dog" value="Dog"
-                              :checked="old('species') === 'Dog'" />
+                              :checked="old('species') === 'Dog'"/>
                 {{--                :checked="old('species') === 'Dog'" is een boolean en wordt gechecked of het gecheckt is, als het waar is word de checkbox op true gezet en dus gecheckt--}}
                 <x-input-label for="Dog">Dog</x-input-label>
 
@@ -86,7 +86,7 @@
         <div>
             <x-input-label for="image_url">Image URL:</x-input-label>
             <x-text-input type="text" name="image_url" id="image_url"
-                          placeholder="Enter the image address">{{old('image_url')}}
+                          placeholder="Enter the image address" value="{{old('image_url')}}">
             </x-text-input>
             @error('image_url')
             <span>
@@ -109,7 +109,7 @@
                 </x-text-input>
                 <x-input-label for="Reserved">Reserved</x-input-label>
                 @error('adoption_status')
-                    <span>
+                <span>
                         {{ $message }}
                     </span>
                 @enderror
@@ -118,12 +118,13 @@
 
         <div>
             <x-input-label for="age">Age</x-input-label>
-            <x-text-input type="number" name="age" id="age" value="{{old('age')}}" />
+            <x-text-input type="number" name="age" id="age" value="{{ old('age') }}" min="0" max="190"/>
             @error('age')
-            <span>
-                {{ $message }}
-            </span>
+                <span>
+                    {{ $message }}
+                </span>
             @enderror
+
         </div>
 
 
@@ -151,7 +152,8 @@
 
         <div>
             <x-input-label name="address">Address</x-input-label>
-            <x-text-input name="address" id="address" placeholder="Enter your pet's/your address"></x-text-input>
+            <x-text-input name="address" id="address" placeholder="Enter your pet's/your address"
+                          value="{{old('address')}}"></x-text-input>
             @error('address')
             <span>
                 {{ $message }}
