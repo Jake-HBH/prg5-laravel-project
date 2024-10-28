@@ -22,6 +22,5 @@
     <h3><strong>{{ $animal->address }}</strong> {{ $animal->created_at->format('d-m-Y') }}</h3>
 
 
-    <!-- Link to details page using Laravel routing -->
     <a href="{{ route('animals.show', $animal->id) }}">Details</a>
 </div>

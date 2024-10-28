@@ -1,8 +1,7 @@
 {{-- //de pagina van de aangemaakte dieren --}}
-
 <x-layout>
 
-    <a href="{{ route('animals.create') }}" class="font-bold text-blue-900 hover:underline">Add animal</a>
+    <x-anchor-link href="{{ route('animals.create') }}" class="font-bold text-blue-900 hover:underline">Add animal</x-anchor-link>
 
     <form action="{{ route('animals.index') }}" method="get" class="mt-4">
         <label for="filter" class="sr-only">Filter</label>
@@ -13,7 +12,7 @@
                     value="{{ $specie->species }}" {{ ($specie->species == $filteredAnimal) ? 'selected' : ''}}>{{ $specie->species }}</option>
             @endforeach
         </select>
-        <button type="submit" class="ml-2 bg-blue-500 text-white rounded p-2">Filter</button>
+        <x-secondary-button type="submit" class="ml-2 bg-blue-500 text-white rounded p-2">Filter</x-secondary-button>
     </form>
 
     <h2 class="text-xl font-bold mt-6 mb-4">Latest Added Animals</h2>
@@ -29,8 +28,8 @@
                     <p class="text-gray-500"><strong><small>{{ $animal->address }}
                         </strong>{{ $animal->created_at->format('d F Y') }}</small></p>
                     <p class="text-gray-500"><small>Posted by: {{ $animal->user->name ?? 'Unknown' }}</small></p>
-                    <a href="{{ route('animals.show', $animal) }}"
-                       class="mt-2 inline-block bg-blue-500 text-white rounded p-2">View Details</a>
+                    <x-anchor-link href="{{ route('animals.show', $animal) }}"
+                       class="mt-2 inline-block text-white rounded p-2">View Details</x-anchor-link>
                 </div>
             </div>
         @endforeach
@@ -50,8 +49,8 @@
                         <p class="text-gray-500"><strong><small>{{ $animal->address }}
                             </strong>{{ $animal->created_at->format('d F Y') }}</small></p>
                         <p class="text-gray-500"><small>Posted by: {{ $animal->user->name ?? 'Unknown' }}</small></p>
-                        <a href="{{ route('animals.show', $animal) }}"
-                           class="mt-2 inline-block bg-blue-500 text-white rounded p-2">View Details</a>
+                        <x-anchor-link href="{{ route('animals.show', $animal) }}"
+                           class="mt-2 inline-block text-white rounded p-2">View Details</x-anchor-link>
                     </div>
                 </div>
             @endif

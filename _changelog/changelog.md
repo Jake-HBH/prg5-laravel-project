@@ -173,3 +173,10 @@ Update **27102024**:
 
 - je kunt nu zien wie de posts heeft gemaakt, gebaseerd op user name
 - hamburger menu werkt nu als je op je naam drukt (wanneer je ingelogd bent), hiermee kun je naar je profile en uitloggen
+
+Update **28102024**:
+
+- delete knop toegevoegd, gebruikers kunnen nu posts deleten, met user_id kunnen alleen de posts verwijderd worden door de users die het gepost hebben. Ook is de delete knop alleen te zien voor de users die de post hebben gemaakt. 
+- address toegevoegd aan details (show)
+- nav layout en navigation samengevoegd in de layout file voor betere overzichtelijkheid
+- anchor link component aangemaakt voor makkelijke herbruikbaarheid

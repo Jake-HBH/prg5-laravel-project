@@ -19,28 +19,28 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-//public routes
+//home pagina
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
+// about pagina
 Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-
+//animal paginas waar je niet mag komen zonder ingelogd te zijn, met index en show (details) als uitzondering, daar mag iedereen kijken
+//dit zijn create, store, edit, destroy, update
 Route::middleware('auth')->group(function () {
-    // de methods van mijn animalcontroller (index, create, store, show, edit, update, destroy)
-    Route::resource('animals', AnimalController::class)->except(['index', 'show']);  // index and show kunnen nog public blijven en hebben geen inlog nodig
+    Route::resource('animals', AnimalController::class)->except(['index', 'show']);
 
     // Route::post('/animals', [AnimalController::class, 'store'])
     //->name('animals.store');
 
     // Route::get('/animals/create', [AnimalController::class, 'create'])
     //->name('animals.create');
-
-    Route::delete('/animals/{animal}', [AnimalController::class, 'destroy'])->name('animals.destroy');
 });
 
+
 Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');
-Route::get('/animals/{animal}', [AnimalController::class, 'show'])->name('animals.show');  // Public
+Route::get('/animals/{animal}', [AnimalController::class, 'show'])->name('animals.show');

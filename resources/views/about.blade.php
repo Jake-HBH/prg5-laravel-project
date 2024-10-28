@@ -17,5 +17,5 @@
     <p>Together, we can give these animals the second chance they deserve. Pawfect Match is not just a platform; it's a
         bridge to a brighter future for pets in need.</p>
     <br>
-    <a href="{{ route('animals.index') }}" class="font-bold text-blue-900  hover:underline">Start your journey with us today! 🐾</a>
+    <x-anchor-link href="{{ route('animals.index') }}" class="font-bold text-blue-900  hover:underline">Start your journey with us today! 🐾</x-anchor-link>
 </x-layout>

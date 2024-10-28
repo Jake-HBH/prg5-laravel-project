@@ -14,7 +14,8 @@
     <p>Join our community of animal lovers and discover how you can make a difference. Together, we can ensure these
         animals receive the love and care they deserve.</p>
     <br>
-    <a href="{{ route('animals.index') }}" class="font-bold text-blue-900  hover:underline">Let’s find your great match
-        together! 🐾</a>
+
+    <x-primary-button href="{{ route('animals.index') }}" class="font-bold text-blue-900  hover:underline">Let’s find your great match
+        together! 🐾</x-primary-button>
 
 </x-layout>
