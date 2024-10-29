@@ -15,7 +15,7 @@
         animals receive the love and care they deserve.</p>
     <br>
 
-    <x-primary-button href="{{ route('animals.index') }}" class="font-bold text-blue-900  hover:underline">Let’s find your great match
-        together! 🐾</x-primary-button>
+    <x-anchor-link href="{{ route('animals.index') }}" class="font-bold text-blue-900  hover:underline">Let’s find your great match
+        together! 🐾</x-anchor-link>
 
 </x-layout>

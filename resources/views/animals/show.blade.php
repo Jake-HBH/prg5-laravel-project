@@ -1,24 +1,28 @@
 {{--1 aangemaakte dier--}}
 
 <x-layout>
-    <x-slot:heading>
-        {{ $animal->name }}
-    </x-slot:heading>
 
-    @if($animal->image_url)
-        <img src="{{ $animal->image_url }}" alt="{{ $animal->name }}" width="700">
-    @else
-        <p>No image available</p>
-    @endif
+    <header class="justify-items-start max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-2">{{ $animal->name }}</h1>
+        <hr class="border-gray-300 mb-4">
+    </header>
 
-    <h3>Species: {{ $animal->species }}</h3>
-    <h3>Age: {{ $animal->age }}</h3>
-    <h3>Gender: {{ $animal->gender }}</h3>
-    <p>Description: {{ $animal->description }}</p>
-    <h3>Address: {{ $animal->address }}</h3>
+    <div class="bg-gray-200 p-6 rounded-lg shadow-lg mb-6">
+        @if($animal->image_url)
+            <img src="{{ $animal->image_url }}" alt="{{ $animal->name }}" class="w-full max-w-lg mb-4 rounded-lg shadow-lg">
+        @else
+            <p class="text-gray-500 mb-4">No image available</p>
+        @endif
 
-    <div class="flex flex-row">
-        <a href="{{ route('animals.index') }}" class="font-bold text-blue-900 hover:underline">
+        <h3 class="text-3xl font-semibold text-gray-800 mb-1">Species: <span class="font-normal text-gray-600">{{ $animal->species }}</span></h3>
+        <h3 class="text-3xl font-semibold text-gray-800 mb-1">Age: <span class="font-normal text-gray-600">{{ $animal->age }}</span></h3>
+        <h3 class="text-3xl font-semibold text-gray-800 mb-1">Gender: <span class="font-normal text-gray-600">{{ $animal->gender }}</span></h3>
+        <p class="text-lg text-gray-700 mb-4">Description: <span class="font-normal text-gray-600">{{ $animal->description }}</span></p>
+        <h3 class="text-3xl font-semibold text-gray-800 mb-1">Address: <span class="font-normal text-gray-600">{{ $animal->address }}</span></h3>
+    </div>
+
+    <div class="flex flex-row mt-6">
+        <a href="{{ route('animals.index') }}" class="font-bold text-blue-700 hover:underline transition duration-200 ease-in-out mr-4">
             Back to pet overview
         </a>
 
@@ -30,7 +34,7 @@
                 @csrf
                 @method('DELETE')
                 <x-primary-button type="submit"
-                        class="bg-red-600 text-white px-3 py-2 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+                                  class="bg-red-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
                     Remove post
                 </x-primary-button>
             </form>

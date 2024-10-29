@@ -180,3 +180,9 @@ Update **28102024**:
 - address toegevoegd aan details (show)
 - nav layout en navigation samengevoegd in de layout file voor betere overzichtelijkheid
 - anchor link component aangemaakt voor makkelijke herbruikbaarheid
+
+Update **29102024**:
+
+- soft delete toegevoegd
+- betere create pagina look
+- header voor huisdier namen toegevoegd
