@@ -186,3 +186,9 @@ Update **29102024**:
 - soft delete toegevoegd
 - betere create pagina look
 - header voor huisdier namen toegevoegd
+
+Update **30102024**:
+
+- edit toegevoegd
+- edit werkt ook net als de delete met authorisatie
+- oude values worden teruggezet

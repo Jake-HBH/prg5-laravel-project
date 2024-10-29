@@ -17,9 +17,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
-//home pagina
+// home pagina
 Route::get('/', function () {
     return view('home');
 })->name('home');
@@ -29,18 +29,27 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-//animal paginas waar je niet mag komen zonder ingelogd te zijn, met index en show (details) als uitzondering, daar mag iedereen kijken
-//dit zijn create, store, edit, destroy, update
+// animal paginas waar je niet mag komen zonder ingelogd te zijn, met index en show (details) als uitzondering, daar mag iedereen kijken
+// dit zijn create, store, edit, destroy, update
 Route::middleware('auth')->group(function () {
-    Route::resource('animals', AnimalController::class)->except(['index', 'show']);
+    // Index route
+    Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');
 
-    // Route::post('/animals', [AnimalController::class, 'store'])
-    //->name('animals.store');
+    // Create route
+    Route::get('/animals/create', [AnimalController::class, 'create'])->name('animals.create');
 
-    // Route::get('/animals/create', [AnimalController::class, 'create'])
-    //->name('animals.create');
+    // Store route
+    Route::post('/animals', [AnimalController::class, 'store'])->name('animals.store');
+
+    // Show route
+    Route::get('/animals/{animal}', [AnimalController::class, 'show'])->name('animals.show');
+
+    // Edit route
+    Route::get('/animals/{animal}/edit', [AnimalController::class, 'edit'])->name('animals.edit');
+
+    // Update route
+    Route::patch('/animals/{animal}', [AnimalController::class, 'update'])->name('animals.update');
+
+    // Destroy route
+    Route::delete('/animals/{animal}', [AnimalController::class, 'destroy'])->name('animals.destroy');
 });
-
-
-Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');
-Route::get('/animals/{animal}', [AnimalController::class, 'show'])->name('animals.show');

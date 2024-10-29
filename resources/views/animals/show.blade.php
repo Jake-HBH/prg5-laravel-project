@@ -29,15 +29,18 @@
         {{--    alleen de delete knop laten zien voor de user waarmee de user id matcht--}}
         {{--    wanneer op submit word gedrukt krijg je nog een confirmation of je dat echt wilt--}}
         @if($animal->user_id === Auth::id())
-            <form action="{{ route('animals.destroy', $animal) }}" method="post"
-                  onsubmit="return confirm('Are you sure you want to delete this adoption post?');">
-                @csrf
-                @method('DELETE')
-                <x-primary-button type="submit"
-                                  class="bg-red-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
-                    Remove post
-                </x-primary-button>
-            </form>
+            <div class="flex flex-row mt-4">
+                <a href="{{ route('animals.edit', $animal) }}" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition duration-200">
+                    Edit Animal
+                </a>
+                <form action="{{ route('animals.destroy', $animal) }}" method="post" class="ml-4" onsubmit="return confirm('Are you sure you want to delete this adoption post?');">
+                    @csrf
+                    @method('DELETE')
+                    <x-primary-button type="submit" class="bg-red-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+                        Remove post
+                    </x-primary-button>
+                </form>
+            </div>
         @endif
     </div>
 </x-layout>
