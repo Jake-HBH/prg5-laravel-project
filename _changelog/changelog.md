@@ -192,3 +192,9 @@ Update **30102024**:
 - edit toegevoegd
 - edit werkt ook net als de delete met authorisatie
 - oude values worden teruggezet
+
+Update **31102024**:
+
+- zoekveld toegevoegd
+- werkt met filter van species
+- create werkt weer

@@ -31,9 +31,9 @@ Route::get('/about', function () {
 
 // animal paginas waar je niet mag komen zonder ingelogd te zijn, met index en show (details) als uitzondering, daar mag iedereen kijken
 // dit zijn create, store, edit, destroy, update
+
+
 Route::middleware('auth')->group(function () {
-    // Index route
-    Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');
 
     // Create route
     Route::get('/animals/create', [AnimalController::class, 'create'])->name('animals.create');
@@ -41,8 +41,6 @@ Route::middleware('auth')->group(function () {
     // Store route
     Route::post('/animals', [AnimalController::class, 'store'])->name('animals.store');
 
-    // Show route
-    Route::get('/animals/{animal}', [AnimalController::class, 'show'])->name('animals.show');
 
     // Edit route
     Route::get('/animals/{animal}/edit', [AnimalController::class, 'edit'])->name('animals.edit');
@@ -53,3 +51,8 @@ Route::middleware('auth')->group(function () {
     // Destroy route
     Route::delete('/animals/{animal}', [AnimalController::class, 'destroy'])->name('animals.destroy');
 });
+
+// Index route
+Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');
+// Show route
+Route::get('/animals/{animal}', [AnimalController::class, 'show'])->name('animals.show');

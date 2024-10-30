@@ -12,6 +12,10 @@
                     value="{{ $specie->species }}" {{ ($specie->species == $filteredAnimal) ? 'selected' : ''}}>{{ $specie->species }}</option>
             @endforeach
         </select>
+
+        <input type="text" name="search" placeholder="Search" value="{{ request('search') }}"
+               class="border border-gray-300 rounded p-2 w-full" />
+
         <x-secondary-button type="submit" class="ml-2 bg-blue-500 text-white rounded p-2">Filter</x-secondary-button>
     </form>
 
