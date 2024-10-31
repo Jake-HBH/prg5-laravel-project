@@ -193,8 +193,13 @@ Update **30102024**:
 - edit werkt ook net als de delete met authorisatie
 - oude values worden teruggezet
 
-Update **31102024**:
+Update **31102024.1**:
 
 - zoekveld toegevoegd
 - werkt met filter van species
 - create werkt weer
+
+Update **31102024.2**:
+
+- admin rol toegevoegd
+- admin dashboard layout toegevoegd

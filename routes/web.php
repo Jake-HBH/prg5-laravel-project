@@ -1,14 +1,19 @@
 <?php
 
+use App\Http\Controllers\AdminAnimalController;
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Animal;
 use Illuminate\Support\Facades\Route;
 
-// dashboard voor ingelogde users/admin
+// dashboard voor admin
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    if (auth()->check() && auth()->user()->role === 'admin') {
+        return view('admin.dashboard');
+    }
+    return redirect('/')->with('error', 'Access denied.');
+})->middleware('auth')->name('dashboard');
+
 
 // profiel bekijken en editen
 Route::middleware('auth')->group(function () {
@@ -31,8 +36,6 @@ Route::get('/about', function () {
 
 // animal paginas waar je niet mag komen zonder ingelogd te zijn, met index en show (details) als uitzondering, daar mag iedereen kijken
 // dit zijn create, store, edit, destroy, update
-
-
 Route::middleware('auth')->group(function () {
 
     // Create route
@@ -52,7 +55,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/animals/{animal}', [AnimalController::class, 'destroy'])->name('animals.destroy');
 });
 
-// Index route
 Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');
-// Show route
 Route::get('/animals/{animal}', [AnimalController::class, 'show'])->name('animals.show');
+
+Route::middleware(['admin'])->group(function () {
+    Route::get('/admin/animals', [AdminAnimalController::class, 'index'])->name('admin.animals.index');
+    Route::get('/admin/animals/create', [AdminAnimalController::class, 'create'])->name('admin.animals.create');
+    Route::post('/admin/animals', [AdminAnimalController::class, 'store'])->name('admin.animals.store');
+    Route::get('/admin/animals/{animal}/edit', [AdminAnimalController::class, 'edit'])->name('admin.animals.edit');
+    Route::patch('/admin/animals/{animal}', [AdminAnimalController::class, 'update'])->name('admin.animals.update');
+    Route::delete('/admin/animals/{animal}', [AdminAnimalController::class, 'destroy'])->name('admin.animals.destroy');
+});
+
+
