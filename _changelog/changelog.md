@@ -203,3 +203,10 @@ Update **31102024.2**:
 
 - admin rol toegevoegd
 - admin dashboard layout toegevoegd
+
+Update **01112024**:
+
+- CRU(D) voor posts voor admin gemaakt in admin dashboard
+- publish en unpublish
+- posts van users moeten nu eerst goedgekeurd worden door een admin voordat ze gepublisht worden
+- adminmiddleware aangemaakt
