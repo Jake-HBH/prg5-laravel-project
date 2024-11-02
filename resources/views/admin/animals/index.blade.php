@@ -31,7 +31,7 @@
                         @foreach ($animals as $animal)
                             <tr class="border-b border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <td class="px-4 py-3 text-sm">{{ $animal->name }}</td>
-                                <td class="px-4 py-3 text-sm">{{ $animal->species }}</td>
+                                <td class="px-4 py-3 text-sm"><small>Species: {{ $animal->species->species ?? 'Unknown' }}</small></td>
 
 {{--publish--}}
                                 <td class="px-4 py-3 text-sm">

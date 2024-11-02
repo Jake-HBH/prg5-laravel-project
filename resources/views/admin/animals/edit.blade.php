@@ -25,19 +25,17 @@
 
         <!-- species veld -->
         <div>
-            <x-input-label>🐶 Species</x-input-label>
-            <div class="grid grid-cols-2 gap-4">
-                @foreach(['Dog', 'Cat', 'Rodent', 'Bird', 'Fish', 'Reptile', 'Amphibian', 'Exotic'] as $specie)
-                    <div class="flex items-center gap-2">
-                        <x-text-input type="radio" name="species" id="{{ strtolower($specie) }}" value="{{ $specie }}" :checked="old('species', $animal->species) === $specie"/>
-                        {{-- :checked="old('species') === 'Dog'" is een boolean en wordt gechecked of het gecheckt is, als het waar is word de checkbox op true gezet en dus gecheckt --}}
-                        <x-input-label for="{{ strtolower($specie) }}">{{ $specie }}</x-input-label>
-                        {{-- strtolower zodat de species naam word omgezet naar een lowercase zodat het matcht met de id (omdat elke input met een hoofdletter is) --}}
-                    </div>
+            <x-input-label for="species_id">🐶 Species</x-input-label>
+            <select name="species_id" id="species_id" required class="border border-gray-300 rounded p-2 w-full">
+                @foreach ($species as $specie)
+                    <option value="{{ $specie->id }}" {{ old('species_id', $animal->species_id) == $specie->id ? 'selected' : '' }}>
+                        {{ $specie->species }}
+                    </option>
                 @endforeach
-            </div>
-            @error('species') <span class="text-red-500">{{ $message }}</span> @enderror
+            </select>
+            @error('species_id') <span class="text-red-500">{{ $message }}</span> @enderror
         </div>
+
 
         <!-- image url veld -->
         <div>

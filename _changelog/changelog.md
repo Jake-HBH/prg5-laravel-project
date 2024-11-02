@@ -206,7 +206,13 @@ Update **31102024.2**:
 
 Update **01112024**:
 
-- CRU(D) voor posts voor admin gemaakt in admin dashboard
+- CRUD voor posts voor admin gemaakt in admin dashboard
 - publish en unpublish
 - posts van users moeten nu eerst goedgekeurd worden door een admin voordat ze gepublisht worden
 - adminmiddleware aangemaakt
+
+Update **02112024**:
+
+- CRUD voor edit voor admin gemaakt in admin dashboard
+- overview van posts count per tag van specie
+- bug fixes
