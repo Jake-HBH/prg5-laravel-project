@@ -22,7 +22,7 @@
                         <thead>
                         <tr class="text-left border-b border-gray-300">
                             <th class="px-4 py-2 text-sm font-medium">Name</th>
-                            <th class="px-4 py-2 text-sm font-medium">Species</th>
+                            <th class="px-4 py-2 text-sm font-medium">Description</th>
                             <th class="px-4 py-2 text-sm font-medium">Publish Status</th>
                             <th class="px-4 py-2 text-sm font-medium">Actions</th>
                         </tr>
@@ -31,9 +31,10 @@
                         @foreach ($animals as $animal)
                             <tr class="border-b border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <td class="px-4 py-3 text-sm">{{ $animal->name }}</td>
-                                <td class="px-4 py-3 text-sm"><small>Species: {{ $animal->species->species ?? 'Unknown' }}</small></td>
+                                <td class="px-4 py-3 text-sm"><small>{{ $animal->description ?? 'Unknown' }}</small>
+                                </td>
 
-{{--publish--}}
+                                {{--publish--}}
                                 <td class="px-4 py-3 text-sm">
                                     <form action="{{ $animal->published
                     ? route('admin.animals.unpublish', $animal)
@@ -47,16 +48,16 @@
                                     </form>
                                 </td>
 
-                                <td class="px-4 py-3 text-sm space-x-2">
-                                    <x-anchor-link href="{{ route('admin.animals.edit', $animal) }}"
-                                                   class="text-blue-500 hover:text-blue-600">Edit
+                                <td class="px-2 py-3 text-sm space-x-2 flex">
+                                    <x-anchor-link href="{{ route('admin.animals.edit', $animal) }}">
+                                        Edit
                                     </x-anchor-link>
 
                                     <form action="{{ route('admin.animals.destroy', $animal) }}" method="POST"
                                           style="display:inline;">
                                         @csrf
                                         @method('DELETE')
-                                        <x-primary-button type="submit" class="bg-red-500 hover:bg-red-600 text-white">
+                                        <x-primary-button type="submit">
                                             Delete
                                         </x-primary-button>
                                     </form>

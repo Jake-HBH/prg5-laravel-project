@@ -45,14 +45,18 @@
                                     {{ __('Profile') }}
                                 </x-dropdown-link>
 
-                                {{--admin dashboard link--}}
                                 @if(Auth::user()->role === 'admin')
                                     <x-dropdown-link :href="route('dashboard')">
                                         {{ __('Dashboard') }}
                                     </x-dropdown-link>
                                 @endif
 
-                                <!-- logout -->
+                                @if(Auth::user()->animals()->count() >= 5)
+                                    <x-dropdown-link :href="route('premium.feature')">
+                                        {{ __('Premium Features') }}
+                                    </x-dropdown-link>
+                                @endif
+
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <x-dropdown-link :href="route('logout')"
@@ -67,6 +71,7 @@
                         <x-nav-link href="/register" :active="request()->is('register')">Register</x-nav-link>
                     @endif
                 </div>
+
 
                 <!-- hamburger menu -->
                 <div class="-me-2 flex items-center sm:hidden">

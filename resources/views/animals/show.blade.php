@@ -14,19 +14,21 @@
         @else
             <p class="text-gray-500 mb-4">No image available</p>
         @endif
-        <h3 class="text-3xl font-semibold text-gray-800 mb-1">Species: <span
+        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Species: <span
                 class="font-normal text-gray-600">{{ $animal->species->species}}</span></h3>
-        <h3 class="text-3xl font-semibold text-gray-800 mb-1">Age: <span
+        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Age: <span
                 class="font-normal text-gray-600">{{ $animal->age }}</span></h3>
-        <h3 class="text-3xl font-semibold text-gray-800 mb-1">Gender: <span
+        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Gender: <span
                 class="font-normal text-gray-600">{{ $animal->gender }}</span></h3>
         <p class="text-lg text-gray-700 mb-4">Description: <span
                 class="font-normal text-gray-600">{{ $animal->description }}</span></p>
-        <h3 class="text-3xl font-semibold text-gray-800 mb-1">Address: <span
+        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Address: <span
                 class="font-normal text-gray-600">{{ $animal->address }}</span></h3>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Posted by: <span
+                class="font-normal text-gray-600">{{ $animal->user->name }}</span></h3>
     </div>
 
-    <div class="flex flex-row mt-6">
+    <div class="flex flex-row mt-6 justify-between">
         <a href="{{ route('animals.index') }}"
            class="font-bold text-blue-700 hover:underline transition duration-200 ease-in-out mr-4">
             Back to pet overview
@@ -44,10 +46,10 @@
                       onsubmit="return confirm('Are you sure you want to delete this adoption post?');">
                     @csrf
                     @method('DELETE')
-                    <x-primary-button type="submit"
-                                      class="bg-red-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+                    <button type="submit"
+                            class="bg-red-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
                         Remove post
-                    </x-primary-button>
+                    </button>
                 </form>
             </div>
         @endif

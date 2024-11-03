@@ -16,10 +16,10 @@ Ik heb vandaag **11/10/2024**:
 
 ![screenshot home pagina](images/Screenshot 2024-10-11 230740.png)
 
-
 Ik heb vandaag **12/10/2024**:
 
-- Route parameters toegevoegd zodat ik meer specifieke URL's kan invoeren (http://127.0.0.1:8000/home/Jake bijvoorbeeld geeft je de pagina om mijn info te zien)
+- Route parameters toegevoegd zodat ik meer specifieke URL's kan invoeren (http://127.0.0.1:8000/home/Jake bijvoorbeeld
+  geeft je de pagina om mijn info te zien)
 - ProductController.php (Resource) bestand gemaakt.
 - index.blade.php en show.blade.php bestand gemaakt
 - Route met parameter toegevoegd voor products url in web.php
@@ -34,31 +34,38 @@ Mijn idee voor mijn applicatie:
 
 **Een huisdieren adoptatie applicatie.**
 
-De applicatie is een plek voor het adopteren van huisdieren waar **normale gebruikers/bezoekers** huisdieren kunnen bekijken en misschien een knop kunnen drukken om te "adopteren". 
+De applicatie is een plek voor het adopteren van huisdieren waar **normale gebruikers/bezoekers** huisdieren kunnen
+bekijken en misschien een knop kunnen drukken om te "adopteren".
 
-**Ingelogde gebruikers** kunnen dieren toevoegen, bewerken en verwijderen. 
+**Ingelogde gebruikers** kunnen dieren toevoegen, bewerken en verwijderen.
 
 **De admin** krijgt een dashboard te zien met..
 
-De applicatie laat een detailpagina voor elk dier zien met informatie zoals tekst en afbeelding en een zoek- en filterfunctie, dit kan dus bijvoorbeeld zijn: Honden, Katten, Knaagdieren, Vogels etc.
-
+De applicatie laat een detailpagina voor elk dier zien met informatie zoals tekst en afbeelding en een zoek- en
+filterfunctie, dit kan dus bijvoorbeeld zijn: Honden, Katten, Knaagdieren, Vogels etc.
 
 **User Stories**
 Gebruikers (De mensen die willen/gaan adopteren):
-- Als gebruiker wil ik me kunnen registreren en inloggen, zodat ik toegang heb tot functies die alleen voor ingelogde gebruikers zijn.
 
-- Als gebruiker wil ik een lijst kunnen zien van beschikbare huisdieren, zodat ik kan kijken welke dieren er voor adoptie zijn.
+- Als gebruiker wil ik me kunnen registreren en inloggen, zodat ik toegang heb tot functies die alleen voor ingelogde
+  gebruikers zijn.
 
-- Als gebruiker wil ik meer informatie over een huisdier kunnen bekijken, zodat ik een goed beeld krijg van het huisdier dat ik overweeg te adopteren.
+- Als gebruiker wil ik een lijst kunnen zien van beschikbare huisdieren, zodat ik kan kijken welke dieren er voor
+  adoptie zijn.
+
+- Als gebruiker wil ik meer informatie over een huisdier kunnen bekijken, zodat ik een goed beeld krijg van het huisdier
+  dat ik overweeg te adopteren.
 
 - Als gebruiker wil ik kunnen zoeken naar dieren en filteren op diersoort, zodat ik snel kan vinden wat ik zoek.
 
-- Als ingelogde gebruiker wil ik huisdieren kunnen toevoegen, bewerken en verwijderen, zodat ik kan helpen bij het aanbod van adoptiedieren.
-
+- Als ingelogde gebruiker wil ik huisdieren kunnen toevoegen, bewerken en verwijderen, zodat ik kan helpen bij het
+  aanbod van adoptiedieren.
 
 Admins:
+
 - Als admin wil ik toegang hebben tot een dashboard alleen voor admins, zodat ik dierenprofielen kan beheren.
-- Als admin wil ik ervoor zorgen dat alleen ingelogde gebruikers bepaalde acties kunnen uitvoeren, zodat de beveiliging beter zal zijn.
+- Als admin wil ik ervoor zorgen dat alleen ingelogde gebruikers bepaalde acties kunnen uitvoeren, zodat de beveiliging
+  beter zal zijn.
 
 **ERD**
 
@@ -67,7 +74,6 @@ Admins:
 - adoption requests tabel voor wanneer users op adoptie drukken bij een huisdier
 
 ![screenshot erd](images/laravel_erd.png)
-
 
 **MoSCoW Methode**
 
@@ -85,13 +91,11 @@ Must Have
 - Alleen de uploader van het huisdier voor adoptie mag het item wijzigen.
 - Beveiliging (OWASP top 10)
 - Schakelen van status met button/dropdown in lijst (bijv. geadopteerd/voor adoptie/gereserveerd)
-- Diepere validatie 
+- Diepere validatie
 
 Should Have
 
 - Afbeeldingen kunnen zetten bij het toevoegen van een huisdier
-
-
 
 Ik heb vandaag **14/10/2024**:
 
@@ -162,21 +166,22 @@ Update **24102024**:
 
 - filtersyteem voor species met tags
 
-
 Update **25102024**:
 
-- animals die zijn toegevoegd staan nu in een latest plek 
+- animals die zijn toegevoegd staan nu in een latest plek
 - de latest added animals worden nu bovenaan laten zien
 - mooiere layout in cards
 
 Update **27102024**:
 
 - je kunt nu zien wie de posts heeft gemaakt, gebaseerd op user name
-- hamburger menu werkt nu als je op je naam drukt (wanneer je ingelogd bent), hiermee kun je naar je profile en uitloggen
+- hamburger menu werkt nu als je op je naam drukt (wanneer je ingelogd bent), hiermee kun je naar je profile en
+  uitloggen
 
 Update **28102024**:
 
-- delete knop toegevoegd, gebruikers kunnen nu posts deleten, met user_id kunnen alleen de posts verwijderd worden door de users die het gepost hebben. Ook is de delete knop alleen te zien voor de users die de post hebben gemaakt. 
+- delete knop toegevoegd, gebruikers kunnen nu posts deleten, met user_id kunnen alleen de posts verwijderd worden door
+  de users die het gepost hebben. Ook is de delete knop alleen te zien voor de users die de post hebben gemaakt.
 - address toegevoegd aan details (show)
 - nav layout en navigation samengevoegd in de layout file voor betere overzichtelijkheid
 - anchor link component aangemaakt voor makkelijke herbruikbaarheid
@@ -213,6 +218,16 @@ Update **01112024**:
 
 Update **02112024**:
 
-- CRUD voor edit voor admin gemaakt in admin dashboard
+- CRUD voor tags voor admin gemaakt in admin dashboard
 - overview van posts count per tag van specie
 - bug fixes
+
+Update **03112024**:
+
+- admin user overview met edit, delete en (huidig niet-werkende) activate en deactivate account functie
+- bug fixes
+- diepere validatie toegevoegd voor premium features, users moeten tenminste 5 dieren toevoegen om deze route te kunnen
+  zien en gebruiken
+- aantal layout veranderingen
+- alle bestanden die nog niet waren gepusht, nu wel gepusht (82 bestanden)
+- description inplaats van species in admin animal overview

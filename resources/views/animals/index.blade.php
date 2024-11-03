@@ -7,7 +7,7 @@
 
         <form action="{{ route('animals.index') }}" method="get" class="mt-4">
             <label for="filter" class="sr-only">Filter</label>
-            <select name="filter" id="filter" class="border border-gray-300 rounded p-2">
+            <select name="filter" id="filter" class="border border-gray-300 rounded p-3">
                 <option value="">All animals</option>
                 @foreach($species as $specie)
                     <option value="{{ $specie->id }}" {{ ($specie->id == $filteredAnimal) ? 'selected' : '' }}>
@@ -15,12 +15,13 @@
                     </option>
                 @endforeach
             </select>
+            <x-secondary-button type="submit" class="p-3">Filter
+            </x-secondary-button>
 
             <input type="text" name="search" placeholder="Search" value="{{ request('search') }}"
                    class="border border-gray-300 rounded p-2 w-full"/>
 
-            <x-secondary-button type="submit" class="ml-2 bg-blue-500 text-white rounded p-2">Filter
-            </x-secondary-button>
+
         </form>
     </div>
     <h2 class="text-xl font-bold mt-6 mb-4">Latest Added Animals</h2>

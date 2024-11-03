@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AdminAnimalController;
 use App\Http\Controllers\AdminSpeciesController;
-use App\Http\Controllers\AdminTagController;
+use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
@@ -46,7 +46,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');
 Route::get('/animals/{animal}', [AnimalController::class, 'show'])->name('animals.show');
 
-// admin routes voor het beheren van dieren, alleen toegankelijk voor admin
+// admin animals posts overview
 Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     Route::get('/admin/animals', [AdminAnimalController::class, 'index'])->name('admin.animals.index');
     Route::get('/admin/animals/create', [AdminAnimalController::class, 'create'])->name('admin.animals.create');
@@ -58,6 +58,7 @@ Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     Route::post('/admin/animals/{animal}/unpublish', [AdminAnimalController::class, 'unpublish'])->name('admin.animals.unpublish');
 });
 
+//admin species overview
 Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     Route::get('/admin/species', [AdminSpeciesController::class, 'index'])->name('admin.species.index');
     Route::get('/admin/species/create', [AdminSpeciesController::class, 'create'])->name('admin.species.create');
@@ -67,13 +68,19 @@ Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     Route::delete('/admin/species/{species}', [AdminSpeciesController::class, 'destroy'])->name('admin.species.destroy');
 });
 
-use App\Http\Controllers\AdminUserController;
-
+//admin users overview
 Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     Route::get('/admin/users', [AdminUserController::class, 'index'])->name('admin.users.index');
     Route::get('/admin/users/{user}/edit', [AdminUserController::class, 'edit'])->name('admin.users.edit');
     Route::patch('/admin/users/{user}', [AdminUserController::class, 'update'])->name('admin.users.update');
     Route::delete('/admin/users/{user}', [AdminUserController::class, 'destroy'])->name('admin.users.destroy');
+    Route::patch('/admin/users/{user}/activate', [AdminUserController::class, 'activate'])->name('admin.users.activate');
+    Route::patch('/admin/users/{user}/deactivate', [AdminUserController::class, 'deactivate'])->name('admin.users.deactivate');
 });
+
+//premium feature view voor users die 5 of meer dieren hebben gepost
+Route::get('/premium-feature', [AnimalController::class, 'premiumFeature'])
+    ->name('premium.feature')
+    ->middleware('auth');
 
 
